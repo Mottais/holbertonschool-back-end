@@ -8,7 +8,7 @@ if __name__ == "__main__":
     id = argv[1]
     url_api = 'https://jsonplaceholder.typicode.com'
     json_user = requests.get(url_api + "/users/" + id)
-    json_todo = requests.get(f'{url_api}/todos?userId={id}')
+    json_todo = requests.get(url_api + "/todos?userId=" + id)
 
     data_user = json_user.json()
     data_todos = json_todo.json()
