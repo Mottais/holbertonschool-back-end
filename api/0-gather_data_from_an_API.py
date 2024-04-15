@@ -11,9 +11,6 @@ if __name__ == "__main__":
     json_user = requests.get(url_api + "/users/" + id)
     json_todo = requests.get(url_api + "/todos?userId=" + id)
 
-    if json_user.status_code != 200:
-        exit()
-
     data_user = json_user.json()
     data_todos = json_todo.json()
 
